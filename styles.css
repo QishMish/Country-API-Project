@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    
+}
+body{
+    background-color: #2196F3;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    height: 100%;
+    
+    /* display: grid;
+    grid-template-columns: auto auto auto; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.movie{
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
+}
+.header{
+    background-color: azure;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px 10px 60px;
+}
+.header img{
+    width: 100px;
+    cursor: pointer;
+
+}
+.header span{
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: rgb(73, 73, 73);;
+    text-shadow: 0px 1px, 1px 0px, 1px 1px;
+    cursor: pointer;
+}
+.input{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #56f038;
+}
+.search{
+    width: 220px;
+    height: 40px;
+    outline: none;
+    border: none;
+    margin: 15px;
+    border-radius: 80px;
+    padding: 10px;
+    background: transparent;
+    border: 3px solid white;
+}
+::placeholder { 
+    color: white;
+    opacity: 1; 
+  }
+.submit{
+    width: 150px;
+    height: 36px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: rgb(89, 248, 16);
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+}
+.submit:hover{
+    background-color: white;
+    color: rgb(89, 248, 16);
+}
+input[type=search] {
+    color: white;
+}
+.notification{
+    color: red;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: bolder;
+
+}
+.country{
+    width: 400px;
+    background-color: white;
+    height:550px;
+    margin-top: 60px;
+    box-shadow: 6px 6px 4px 1px rgba(0,0,0,0.37);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+
+}
+.flag{
+    width: 100%;
+    height: 35%;
+    border-radius: 15px 15px 0 0 ;
+    cursor: pointer;
+}
+.country-data{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    color: rgb(73, 73, 73);
+}
+
+.name{
+    color: rgb(73, 73, 73);
+    padding: 10px;
+    font-weight: bold;
+    text-shadow: 0px 1px, 1px 0px, 1px 1px;
+    letter-spacing: 1px;
+}
+.capital{
+    color: rgb(73, 73, 73);
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.population, .language,.curency,.area{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.population img,
+.language img,
+.curency img,
+.area img {
+    width: 40px;
+    border-radius: 50%;
+    padding: 3px;
+    border: 2px solid rgb(70, 255, 13);
+    margin: 10px 20px 10px 0;
+}
+.last-searchs{
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    text-shadow: 0px 1px, 1px 0px, 1px 1px;
+    cursor: pointer;
+    padding: 60px 0 40px 0;
+}
+.underline{
+    width: 220px;
+    height: 4px;
+    background-color: rgb(70, 255, 13);
+    border-radius: 5px;
+}
+.grid{
+    /* max-width: ; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:40px;
+}
+.clear-all-button{
+    width: 150px;
+    height: 36px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: rgb(219, 29, 22);
+    font-weight: bolder;
+    margin: 60px;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+}
+.clear-all-button:hover{
+    background-color: white;
+    color: rgb(219, 29, 22);
+}
+
+@media only screen and (max-width: 1380px) {
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap:20px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .grid{
+        grid-template-columns: repeat(1, 1fr);
+        gap:20px;
+    }
+    .header{
+        padding: 10px 20px 10px 20px;
+        text-align: center;
+    }
+    .header span{
+        font-size: 22px;
+        
+    }
+    .last-searchs{
+        font-size: 22px;
+    }
+}
+@media only screen and (max-width: 460px) {
+    .country{
+        width: 300px;
+        height:450px;
+    
+    }
+    .name{
+        font-size: 22px;
+    }
+    .capital{
+        font-size: 15px;
+    }
+    .population img,
+    .language img,
+    .curency img,
+    .area img {
+        width: 30px;
+    }
+}
